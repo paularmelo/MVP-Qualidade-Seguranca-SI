@@ -10,7 +10,7 @@ modelo = Model()
 avaliador = Avaliador()
 
 # Parâmetros
-url_dados = "database/lifestyle_golden.csv"
+url_dados = "database/sleep_health_golden.csv"
 colunas = [
     "person_ID",
     "gender",
@@ -23,6 +23,7 @@ colunas = [
     "blood_pressure",
     "heart_rate",
     "daily_steps",
+    "disorder",
 ]
 
 # Carga dos dados
@@ -33,36 +34,19 @@ X = dataset.iloc[:, 0:-1]
 Y = dataset.iloc[:, -1]
 
 
-# Método para testar o modelo de Regressão Logística a partir do arquivo correspondente
+# Método para testar o modelo do SVM a partir do arquivo correspondente
 # O nome do método a ser testado necessita começar com "test_"
-def test_modelo_lr():
-    # Importando o modelo de regressão logística
-    lr_path = "ml_model/sleep_health.pkl"
-    modelo_lr = modelo.carrega_modelo(lr_path)
+def test_modelo_svm():
+    # Importando o modelo do SVM
+    svm_path = "ml_model/sleep_health.pkl"
+    modelo_svm = modelo.carrega_modelo(svm_path)
 
-    # Obtendo as métricas da Regressão Logística
-    acuracia_lr, recall_lr, precisao_lr, f1_lr = avaliador.avaliar(modelo_lr, X, Y)
+    # Obtendo as métricas do SVM
+    acuracia_svm, recall_svm, precisao_svm, f1_svm = avaliador.avaliar(modelo_svm, X, Y)
 
-    # Testando as métricas da Regressão Logística
+    # Testando as métricas do SVM
     # Modifique as métricas de acordo com seus requisitos
-    assert acuracia_lr >= 0.75
-    assert recall_lr >= 0.5
-    assert precisao_lr >= 0.5
-    assert f1_lr >= 0.5
-
-
-# Método para testar modelo KNN a partir do arquivo correspondente
-def test_modelo_knn():
-    # Importando modelo de KNN
-    knn_path = "ml_model/sleep_health.pkl"
-    modelo_knn = modelo.carrega_modelo(knn_path)
-
-    # Obtendo as métricas do KNN
-    acuracia_knn, recall_knn, precisao_knn, f1_knn = avaliador.avaliar(modelo_knn, X, Y)
-
-    # Testando as métricas do KNN
-    # Modifique as métricas de acordo com seus requisitos
-    assert acuracia_knn >= 0.75
-    assert recall_knn >= 0.5
-    assert precisao_knn >= 0.5
-    assert f1_knn >= 0.5
+    assert acuracia_svm >= 0.75
+    assert recall_svm >= 0.5
+    assert precisao_svm >= 0.5
+    assert f1_svm >= 0.5

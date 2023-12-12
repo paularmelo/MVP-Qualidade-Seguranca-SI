@@ -1,10 +1,10 @@
-[2023-12-11 22:21:38,034] INFO _log() L187  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+[2023-12-12 19:00:16,927] INFO _log() L187  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000 - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
-[2023-12-11 22:21:38,044] INFO _log() L187  [33mPress CTRL+C to quit[0m - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
-[2023-12-11 22:21:38,047] INFO _log() L187   * Restarting with stat - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
-[2023-12-11 22:21:47,053] INFO _log() L187  127.0.0.1 - - [11/Dec/2023 22:21:47] "GET /pessoas HTTP/1.1" 200 - - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
-[2023-12-11 22:22:26,732] INFO _log() L187  127.0.0.1 - - [11/Dec/2023 22:22:26] "GET /pessoas?person_id=5 HTTP/1.1" 200 - - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
-[2023-12-11 22:22:26,747] ERROR _finalize_fairy() L781  Exception during reset or similar - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py L781 
+[2023-12-12 19:00:16,931] INFO _log() L187  [33mPress CTRL+C to quit[0m - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-12-12 19:00:16,933] INFO _log() L187   * Restarting with stat - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-12-12 19:00:21,774] INFO _log() L187  127.0.0.1 - - [12/Dec/2023 19:00:21] "GET /pessoas HTTP/1.1" 200 - - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-12-12 19:02:52,588] INFO _log() L187  127.0.0.1 - - [12/Dec/2023 19:02:52] "GET /pessoas?person_id=5 HTTP/1.1" 200 - - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-12-12 19:02:52,598] ERROR _finalize_fairy() L781  Exception during reset or similar - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py L781 
 Traceback (most recent call last):
   File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py", line 753, in _finalize_fairy
     fairy._reset(pool)
@@ -12,8 +12,8 @@ Traceback (most recent call last):
     pool._dialect.do_rollback(self)
   File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 683, in do_rollback
     dbapi_connection.rollback()
-sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9388 and this is thread id 28436.
-[2023-12-11 22:22:26,750] ERROR _close_connection() L259  Exception closing connection <sqlite3.Connection object at 0x000002329D22C400> - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py L259 
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 26860 and this is thread id 25200.
+[2023-12-12 19:02:52,600] ERROR _close_connection() L259  Exception closing connection <sqlite3.Connection object at 0x000001A8FFA2C400> - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py L259 
 Traceback (most recent call last):
   File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py", line 753, in _finalize_fairy
     fairy._reset(pool)
@@ -21,7 +21,7 @@ Traceback (most recent call last):
     pool._dialect.do_rollback(self)
   File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 683, in do_rollback
     dbapi_connection.rollback()
-sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9388 and this is thread id 28436.
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 26860 and this is thread id 25200.
 
 During handling of the above exception, another exception occurred:
 
@@ -32,8 +32,8 @@ Traceback (most recent call last):
     self.do_close(dbapi_connection)
   File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 692, in do_close
     dbapi_connection.close()
-sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9388 and this is thread id 28436.
-[2023-12-11 22:22:26,781] ERROR _finalize_fairy() L781  Exception during reset or similar - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py L781 
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 26860 and this is thread id 25200.
+[2023-12-12 19:02:52,646] ERROR _finalize_fairy() L781  Exception during reset or similar - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py L781 
 Traceback (most recent call last):
   File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py", line 753, in _finalize_fairy
     fairy._reset(pool)
@@ -41,8 +41,8 @@ Traceback (most recent call last):
     pool._dialect.do_rollback(self)
   File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 683, in do_rollback
     dbapi_connection.rollback()
-sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 21012 and this is thread id 28436.
-[2023-12-11 22:22:26,781] ERROR _close_connection() L259  Exception closing connection <sqlite3.Connection object at 0x000002329D2E64D0> - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py L259 
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4128 and this is thread id 25200.
+[2023-12-12 19:02:52,649] ERROR _close_connection() L259  Exception closing connection <sqlite3.Connection object at 0x000001A8FFAE24D0> - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py L259 
 Traceback (most recent call last):
   File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py", line 753, in _finalize_fairy
     fairy._reset(pool)
@@ -50,7 +50,7 @@ Traceback (most recent call last):
     pool._dialect.do_rollback(self)
   File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 683, in do_rollback
     dbapi_connection.rollback()
-sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 21012 and this is thread id 28436.
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4128 and this is thread id 25200.
 
 During handling of the above exception, another exception occurred:
 
@@ -61,36 +61,30 @@ Traceback (most recent call last):
     self.do_close(dbapi_connection)
   File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 692, in do_close
     dbapi_connection.close()
-sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 21012 and this is thread id 28436.
-[2023-12-11 22:22:27,236] ERROR log_exception() L1741 Exception on /pessoa [POST] - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py L1741
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4128 and this is thread id 25200.
+[2023-12-12 19:02:53,210] INFO preditor() L50   ================ diagnosis[0] ============ : '1.0' - call_trace=C:\Users\Paula\Documents\CURSOS\Pos Eng Software\Sprint 4\MVP\codigos\mvp_sleep_health\api\model\modelo.py L50  
+[2023-12-12 19:02:53,211] INFO predict() L111  Adicionando pessoa de número: '5' - call_trace=C:\Users\Paula\Documents\CURSOS\Pos Eng Software\Sprint 4\MVP\codigos\mvp_sleep_health\api\app.py L111 
+[2023-12-12 19:02:53,234] INFO _log() L187  127.0.0.1 - - [12/Dec/2023 19:02:53] "POST /pessoa HTTP/1.1" 200 - - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-12-12 19:03:01,237] INFO _log() L187  127.0.0.1 - - [12/Dec/2023 19:03:01] "GET /pessoas HTTP/1.1" 200 - - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-12-12 19:03:43,194] ERROR _finalize_fairy() L781  Exception during reset or similar - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py L781 
 Traceback (most recent call last):
-  File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_openapi3\scaffold.py", line 127, in view_func
-    response = func(**func_kwargs)
-               ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Paula\Documents\CURSOS\Pos Eng Software\Sprint 4\MVP\codigos\mvp_sleep_health\api\app.py", line 95, in predict
-    modelo = Model.carrega_modelo(ml_path, scaler)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Paula\Documents\CURSOS\Pos Eng Software\Sprint 4\MVP\codigos\mvp_sleep_health\api\model\modelo.py", line 16, in carrega_modelo
-    raise Exception("Formato de arquivo não suportado")
-Exception: Formato de arquivo não suportado
-[2023-12-11 22:22:27,241] INFO _log() L187  127.0.0.1 - - [11/Dec/2023 22:22:27] "[35m[1mPOST /pessoa HTTP/1.1[0m" 500 - - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
-[2023-12-11 22:22:43,060] INFO _log() L187  127.0.0.1 - - [11/Dec/2023 22:22:43] "GET /pessoas HTTP/1.1" 200 - - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
-[2023-12-11 22:23:23,715] INFO _log() L187   * Detected change in 'C:\\Users\\Paula\\Documents\\CURSOS\\Pos Eng Software\\Sprint 4\\MVP\\codigos\\mvp_sleep_health\\api\\model\\modelo.py', reloading - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
-[2023-12-11 22:23:23,920] INFO _log() L187   * Restarting with stat - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
-[2023-12-11 22:23:26,956] INFO _log() L187   * Restarting with stat - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
-[2023-12-11 22:23:30,104] INFO _log() L187   * Restarting with stat - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
+  File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py", line 753, in _finalize_fairy
+    fairy._reset(pool)
+  File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py", line 1004, in _reset
+    pool._dialect.do_rollback(self)
+  File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 683, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13764 and this is thread id 26952.
+[2023-12-12 19:03:43,209] ERROR _finalize_fairy() L781  Exception during reset or similar - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py L781 
+Traceback (most recent call last):
+  File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py", line 753, in _finalize_fairy
+    fairy._reset(pool)
+  File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\pool\base.py", line 1004, in _reset
+    pool._dialect.do_rollback(self)
+  File "C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 683, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 25200 and this is thread id 26952.
+[2023-12-12 19:05:39,617] INFO _log() L187  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-12-12 19:05:39,617] INFO _log() L187  [33mPress CTRL+C to quit[0m - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-12-12 19:05:39,619] INFO _log() L187   * Restarting with stat - call_trace=C:\Users\Paula\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\_internal.py L187 
